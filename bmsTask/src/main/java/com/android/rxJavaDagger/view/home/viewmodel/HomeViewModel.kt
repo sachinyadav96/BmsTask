@@ -5,6 +5,7 @@ import com.android.rxJavaDagger.data.common.NetworkError
 import com.android.rxJavaDagger.model.VenueFeedData
 import com.android.rxJavaDagger.network.CallbackWrapper
 import com.android.rxJavaDagger.network.RestService
+import com.android.rxJavaDagger.utils.BMSConstants
 import com.android.rxJavaDagger.view.base.BaseNetworkViewModel
 import com.google.android.material.snackbar.Snackbar
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -17,7 +18,7 @@ class HomeViewModel @Inject constructor(restService: RestService) :
     var newsData: MutableLiveData<VenueFeedData> = MutableLiveData()
 
     fun getFeedData() {
-        getRestService().getVenueFeedData("https://demo2782755.mockable.io/movie_showtimes")
+        getRestService().getVenueFeedData(BMSConstants.BASE_URL)
             ?.subscribeOn(Schedulers.io())
             ?.observeOn(AndroidSchedulers.mainThread())
             ?.subscribe(object : CallbackWrapper<VenueFeedData>() {
