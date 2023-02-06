@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BMS Task</string>
+    <string name="request_time_out">Request timeout</string>
+    <string name="network_error_heading">Network error</string>
+    <string name="network_error_message_train">Something went wrong. Please try again later</string>
+    <string name="please_wait">Please wait</string>
+    <string name="title">Home</string>
+    <string name="view">View Show Time</string>
+    <string name="home_title">Home</string>
+</resources>
